@@ -28,10 +28,7 @@ Natürlich kann man diesen Problem lösen. Jedoch ist es wenig kompliziert. <br>
 
 ## Verifikation
 
-Am kurzen Erklärungstext zum ManagedBean, kann man erkennen, dass ich verstanden habe, wie man Eingaben von einer Seite auf der anderen anzeigen kann. 
-Der Code beinhaltet, die wichtigsten Stellen, zum dies wiederherzustellen.
-
-XXX
+Am kurzen Erklärungstext zum Session Pinning, kann man erkennen, dass ich verstanden habe, wie man eine unsichere Seite ein Passwort vom Benutzer oder besser vom Admin bekommen. 
 
 # Reflektion zum Arbeitsprozess
 
