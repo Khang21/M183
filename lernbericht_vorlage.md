@@ -10,29 +10,16 @@ Ich habe sehr viele Hacking Methoden gelernt, aber in diesem Lernbericht werde i
 
 ## Beschreibung
 
- Session Pinning ist ein Angriff auf eine verbindungsbehaftete Datenkommunikation zwischen zwei Computern. 
+Session Fixation ist ein Angriff, der es einem Angreifer ermöglicht, eine gültige Benutzersitzung zu kapern. Der Angriff nutzt eine Einschränkung in der Art und Weise aus, wie die Webanwendung die Sitzungs-ID verwaltet, genauer gesagt die anfällige Webanwendung. Bei der Authentifizierung eines Benutzers wird keine neue Sitzungs-ID zugewiesen, so dass es möglich ist, eine bestehende Sitzungs-ID zu verwenden. Der Angriff besteht darin, sich eine gültige Sitzungsnummer zu beschaffen, einen Benutzer dazu zu bringen, sich mit dieser Sitzungsnummer zu authentifizieren, und dann die vom Benutzer bestätigte Sitzung durch die Kenntnis der verwendeten Sitzungsnummer zu entführen. Der Angreifer muss eine legitime Sitzungs-ID für eine Webanwendung bereitstellen und versuchen, den Browser des Opfers dazu zu bringen, diese zu verwenden.
+
+Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
 ![image](https://media.geeksforgeeks.org/wp-content/uploads/20220711160012/sessionfixationattack.png)
 ```
-Ihr Nachname: <h:inputText value="#{helloManagedBean.lastName}"/>
-<h:commandButton value="Submit" action="seite2.xhtml"/>
+http://localhost:8080/InsecureApp/faces/secured/index.xhtml;jsessionid=25e3a632733dc737e26b434912ef
 ```
-So wird der ManagedBean aussehen: 
-```java
-private String lastName;
-public String getLastName() {
-return lastName;
-}
-public void setLastName(String lastName) {
-this.lastName = lastName;
-}
-```
-So wird der xhtml Code auf der 2. Seite aussehhen:
+Falls der böser Hacker diesen Session Link bekommen kann, nachdem der Benutzer sich eingeloggt hat, könnte er auf Daten vom Benutzer klauen. 
 
-![image](https://user-images.githubusercontent.com/69575003/187132637-e2185d74-79b5-479d-889a-565dadc54a4e.png)
-
-```
-Ihr Nachname: <h:outputLabel value="#{helloManagedBean.lastName}"/> 
-```
+![image]([https://user-images.githubusercontent.com/69575003/187132637-e2185d74-79b5-479d-889a-565dadc54a4e.png](https://i.ibb.co/0M1h1PJ/Screenshot-2022-12-14-225843.png))
 
 Auf der 1. Seite wird der Benutzer seinen Namen in einem Textfeld eingeben müssen. Danach auf die Submit Link klicken, welches ihn auf der Seite 2 weiterleitet.
 Dazwischen wird das Programm durch die HelloManagedBean Controller laufen. Im Controller wird die obrigen Code durchlaufen. Der Benutzers Name wird im Variable lastName gespeichert.
