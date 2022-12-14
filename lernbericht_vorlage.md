@@ -12,7 +12,6 @@ Ich habe sehr viele Hacking Methoden gelernt, aber in diesem Lernbericht werde i
 
 Session Fixation ist ein Angriff, der es einem Angreifer ermöglicht, eine gültige Benutzersitzung zu kapern. Der Angriff nutzt eine Einschränkung in der Art und Weise aus, wie die Webanwendung die Sitzungs-ID verwaltet, genauer gesagt die anfällige Webanwendung. Bei der Authentifizierung eines Benutzers wird keine neue Sitzungs-ID zugewiesen, so dass es möglich ist, eine bestehende Sitzungs-ID zu verwenden. Der Angriff besteht darin, sich eine gültige Sitzungsnummer zu beschaffen, einen Benutzer dazu zu bringen, sich mit dieser Sitzungsnummer zu authentifizieren, und dann die vom Benutzer bestätigte Sitzung durch die Kenntnis der verwendeten Sitzungsnummer zu entführen. Der Angreifer muss eine legitime Sitzungs-ID für eine Webanwendung bereitstellen und versuchen, den Browser des Opfers dazu zu bringen, diese zu verwenden.
 
-Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
 ![image](https://media.geeksforgeeks.org/wp-content/uploads/20220711160012/sessionfixationattack.png)
 
 
@@ -22,19 +21,22 @@ http://localhost:8080/InsecureApp/faces/secured/index.xhtml;jsessionid=25e3a6327
 ```
 Falls der böser Hacker diesen Session Link bekommen kann, nachdem der Benutzer sich eingeloggt hat, könnte er auf Daten vom Benutzer klauen. 
 
-Auf der 1. Seite wird der Benutzer seinen Namen in einem Textfeld eingeben müssen. Danach auf die Submit Link klicken, welches ihn auf der Seite 2 weiterleitet.
-Dazwischen wird das Programm durch die HelloManagedBean Controller laufen. Im Controller wird die obrigen Code durchlaufen. Der Benutzers Name wird im Variable lastName gespeichert.
-Auf der 2. Seite wird die oben gespeicherte Variable wieder mit #{ControllerName.Variable} aufgerufen. 
+Natürlich kann man diesen Problem lösen. Jedoch ist es wenig kompliziert. 
+-Die Standardmethode besteht darin, die Sitzungs-ID direkt nach der Anmeldung des Benutzers zu ändern. Dadurch werden die meisten Schwachstellen bei der Sitzungsfixierung beseitigt.
+-Außerdem sollten Sie Sitzungs-IDs nach einer Zeitüberschreitung ungültig machen. So sollte beispielsweise nach 10 Minuten ohne Aktivität eine automatische Abmeldung erfolgen. Dies gibt dem Angreifer ein kleines Zeitfenster, in dem er die feste Sitzungs-ID verwenden kann.
+-etc.
 
 ## Verifikation
 
 Am kurzen Erklärungstext zum ManagedBean, kann man erkennen, dass ich verstanden habe, wie man Eingaben von einer Seite auf der anderen anzeigen kann. 
 Der Code beinhaltet, die wichtigsten Stellen, zum dies wiederherzustellen.
 
+XXX
+
 # Reflektion zum Arbeitsprozess
 
-Ich bin mit meiner Arbeit bisher in JSF zufrieden. Ich lerne nicht gerne, neue Sprachen, weil ich bisher schon viele gelernt habe. Aber bei JSF war es eine Ausnahme, weil wir immernoch mit HTML und Java programmieren, jedoch wird es nur bei der HTML Seite anders. Dies war mir eine Herausforderung am Anfang, aber nach der Zeit verlief es mir gut.
+Ich bin nicht zur Frieden mit meiner Arbeitseinteilung. Ich hatte immer länger gebraucht als die eingeschätzte Zeit. Ich weiss nicht, ob es nur bei mir der Fall ist oder ob ich einfach die Aufgaben zu wenig verstehe. 
 
-Ich habe zur Beginn dieses Projektes sehr viel Mühe gehabt, überhaupt die Vorlage Page zu starten. Wir hatten meiner Meinung nach zu wenig Zeit gehabt, die nötigen JDKs und Netbeans etc zu installieren.
+Für JSF gibt es auf Youtube nicht bis gar keine Tutorials 
 
-**VBV**: Ich werde bei neueren Aufträge einen kurzen Pseudo Code schreiben, damit ich schneller Fehlern beheben kann
+**VBV**: Ich werde bei neueren Aufträge die Präsentationen genauer durch lesen.
