@@ -3,21 +3,15 @@ Khang Cung
 
 ## Einleitung
 
-Wir befinden uns im Modul 133. In diesem Modul arbeiten wir mit JSF.
+Wir befinden uns im Modul 1. In diesem Modul erweitern wir unser JSF wissen und lernen über potenzielle Hacking Angriff.
 
 ## Was habe ich gelernt?
-Ich habe gelernt, wie man mithilfe von "ManagedBean" Daten von einer xhtml Seite auf ein anderen weiterleiten kann.
+Ich habe sehr viele Hacking Methoden gelernt, aber in diesem Lernbericht werde ich über die "Session Pinning" Methode gehen.
 
 ## Beschreibung
 
-
-* Eine textliche Beschreibung
-
-JSF kann man als MVC framework verstehen. Das Model ist Facelet, das View ist xhtml und der Controller ist ManagedBean. 
-Beispiel:
-Der Benutzer will sein Namen auf der 2. Seite anzeigen lassen. 
-So wird der xhtml Code auf der 1. Seite aussehhen:
-![image](https://user-images.githubusercontent.com/69575003/187132608-79fcfd37-cb03-4705-a257-1091dbebbefe.png)
+ Session Pinning ist ein Angriff auf eine verbindungsbehaftete Datenkommunikation zwischen zwei Computern. 
+![image](https://media.geeksforgeeks.org/wp-content/uploads/20220711160012/sessionfixationattack.png)
 ```
 Ihr Nachname: <h:inputText value="#{helloManagedBean.lastName}"/>
 <h:commandButton value="Submit" action="seite2.xhtml"/>
