@@ -17,9 +17,10 @@ Session Fixation ist ein Angriff, der es einem Angreifer ermöglicht, eine gült
 ```
 http://localhost:8080/InsecureApp/faces/secured/index.xhtml;jsessionid=25e3a632733dc737e26b434912ef
 ```
-Falls der böser Hacker diesen Session Link bekommen kann, nachdem der Benutzer sich eingeloggt hat, könnte er auf Daten vom Benutzer klauen. 
 
 ![image](https://i.ibb.co/0M1h1PJ/Screenshot-2022-12-14-225843.png)
+
+Falls der böser Hacker diesen Session Link bekommen kann, nachdem der Benutzer sich eingeloggt hat, könnte er auf Daten vom Benutzer klauen. 
 
 Auf der 1. Seite wird der Benutzer seinen Namen in einem Textfeld eingeben müssen. Danach auf die Submit Link klicken, welches ihn auf der Seite 2 weiterleitet.
 Dazwischen wird das Programm durch die HelloManagedBean Controller laufen. Im Controller wird die obrigen Code durchlaufen. Der Benutzers Name wird im Variable lastName gespeichert.
