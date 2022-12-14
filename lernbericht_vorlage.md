@@ -21,8 +21,8 @@ http://localhost:8080/InsecureApp/faces/secured/index.xhtml;jsessionid=25e3a6327
 ```
 Falls der böser Hacker diesen Session Link bekommen kann, nachdem der Benutzer sich eingeloggt hat, könnte er auf Daten vom Benutzer klauen. 
 
-Natürlich kann man diesen Problem lösen. Jedoch ist es wenig kompliziert. 
--Die Standardmethode besteht darin, die Sitzungs-ID direkt nach der Anmeldung des Benutzers zu ändern. Dadurch werden die meisten Schwachstellen bei der Sitzungsfixierung beseitigt.
+Natürlich kann man diesen Problem lösen. Jedoch ist es wenig kompliziert. <br>
+-Die Standardmethode besteht darin, die Sitzungs-ID direkt nach der Anmeldung des Benutzers zu ändern. Dadurch werden die meisten Schwachstellen bei der Sitzungsfixierung beseitigt.<br>
 -Außerdem sollten Sie Sitzungs-IDs nach einer Zeitüberschreitung ungültig machen. So sollte beispielsweise nach 10 Minuten ohne Aktivität eine automatische Abmeldung erfolgen. Dies gibt dem Angreifer ein kleines Zeitfenster, in dem er die feste Sitzungs-ID verwenden kann.
 -etc.
 
