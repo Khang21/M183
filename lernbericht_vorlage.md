@@ -19,7 +19,7 @@ http://localhost:8080/InsecureApp/faces/secured/index.xhtml;jsessionid=25e3a6327
 ```
 Falls der böser Hacker diesen Session Link bekommen kann, nachdem der Benutzer sich eingeloggt hat, könnte er auf Daten vom Benutzer klauen. 
 
-![image]([https://user-images.githubusercontent.com/69575003/187132637-e2185d74-79b5-479d-889a-565dadc54a4e.png](https://i.ibb.co/0M1h1PJ/Screenshot-2022-12-14-225843.png))
+![image](https://i.ibb.co/0M1h1PJ/Screenshot-2022-12-14-225843.png)
 
 Auf der 1. Seite wird der Benutzer seinen Namen in einem Textfeld eingeben müssen. Danach auf die Submit Link klicken, welches ihn auf der Seite 2 weiterleitet.
 Dazwischen wird das Programm durch die HelloManagedBean Controller laufen. Im Controller wird die obrigen Code durchlaufen. Der Benutzers Name wird im Variable lastName gespeichert.
